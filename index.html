@@ -38,7 +38,7 @@
         .wishlist-image {
             max-width: 200px;
             transform: rotate(-5deg);
-            opacity: 0.7;
+            opacity: 1;
             position: absolute;
             z-index: 3; /* Images are placed above body */
         }
@@ -75,6 +75,16 @@
             z-index: 3; /* Footer content is on top */
         }
     </style>
+    <script>
+        function hideImage(imgId) {
+            var img = document.getElementById(imgId);
+            img.style.display = "none"; // Hide the image
+
+            setTimeout(function () {
+                img.style.display = "block"; // Show the image after 10 seconds
+            }, 10000); // 10 seconds = 10,000 milliseconds
+        }
+    </script>
 </head>
 
 <body>
@@ -85,30 +95,85 @@
         <h1 style="font-size: 40px;">Christmas Wishlist!</h1>
     </div>
 
-    <img class="wishlist-image" src="https://st3.depositphotos.com/1005435/12568/i/950/depositphotos_125680556-stock-photo-man-wearing-christmas-hat-and.jpg" alt="Wishlist Image" style="top: 40px; left: 20px;" />
-    <img class="wishlist-image" src="https://c8.alamy.com/comp/DH5G48/cheerful-christmas-man-giving-thumbs-up-in-front-of-tree-DH5G48.jpg" alt="Wishlist Image" style="top: 220px; left: 80px; transform: rotate(15deg);" />
-    <img class="wishlist-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu2hpCY7ndRzssCJXrF2sny2hfvmG6uBWmnw&usqp=CAU" alt="Wishlist Image" style="top: 420px; left: 250px; transform: rotate(-10deg);" />
+    <img class="wishlist-image" id="image1" src="https://st3.depositphotos.com/1005435/12568/i/950/depositphotos_125680556-stock-photo-man-wearing-christmas-hat-and.jpg" alt="Wishlist Image" style="top: 40px; left: 20px;" onclick="hideImage('image1')" />
+    <img class="wishlist-image" id="image2" src="https://c8.alamy.com/comp/DH5G48/cheerful-christmas-man-giving-thumbs-up-in-front-of-tree-DH5G48.jpg" alt="Wishlist Image" style="top: 100px; right: 80px; transform: rotate(15deg);" onclick="hideImage('image2')" />
+    <img class="wishlist-image" id="image3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu2hpCY7ndRzssCJXrF2sny2hfvmG6uBWmnw&usqp=CAU" alt="Wishlist Image" style="top: 520px; right: 50px; transform: rotate(-10deg);" onclick="hideImage('image3')" />
 
     <div id="main-content">
-        <h2 style="font-size: 30px;">My Wishlist:</h2>
+        <h2 style="font-size: 30px; margin-bottom: 5px;">My Wishlist: 
+            <span style="font-size: 15px; color: grey;">(Subject to change)
+            </span>
+        </h2>
+        <p style="font-size: 10px; padding: 0px; margin-top: 5px; margin-left: px">
+            If the images are in the way, click them and they'll dissapear temporarily 
+        </p>
         <div class="item">
-            <h3>Item 1: An amazing gift</h3>
-            <p>Description: This is the most awesome gift ever!</p>
+            <h3>Item Group 1:</h3>
+            <ul>
+                <li>
+                    <a href="">M5Stack Devices</a>
+                    <ul>
+                        <li>Any of them should be fine, including the sensors for them</li>
+                        <li>I currently have a M5StickC Plus in case you get sensors, but even then I think they're all compatable</li>
+                        <li><b>The modules are only compatile with certain devices!</b></li>
+                    </ul>
+                </li>
+                <li>
+                    3d Printer Filament
+                    <ul>
+                        <li>
+                            I currently have a few things of black and white, so any other colors would be epic
+                            <ul>
+                                <li>PLA</li>
+                                <li>PET</li>
+                                <li>PETG</li>
+                                <li>TPU</li>
+                            </ul>
+                        </li>
+                        <li>
+                            The brand doesn't matter, just make sure the size is 1.75mm
+                            <ul>
+                                <li>1.75mm is the most common, so it shouldn't be an issue</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <div class="item">
-            <h3>Item 2: Another cool thing</h3>
-            <p>Description: I really want this too!</p>
+            <h3>Item Group 2:</h3>
+            <ul>
+                <li>
+                    <a href="https://www.amazon.com/s?k=filament+dehydrator&crid=1NMV4FYYSABGC&sprefix=filament+dehydrator%2Caps%2C124&ref=nb_sb_noss_1">
+                        Filament Dehydrator
+                    </a>
+                    <ul>
+                        <li>Usually around $35-$50 or so</li>
+                        <li>Please just get a cheap one, I don't need anything fancy</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <div class="item">
-            <h3>Item 3: The last wish</h3>
-            <p>Description: I hope I get this for Christmas!</p>
+            <h3>Item Group3:</h3>
+            <ul>
+                <li>
+                    <a href="https://weareplufl.com/">
+                        Plufl
+                    </a>
+                    <ul>
+                        <li>Like a dog bed thing for humans</li>
+                        <li>Looks very comfy</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 
     <div id="footer">
-        <img src="https://cdn.create.vista.com/api/media/medium/514536936/stock-photo-cheerful-middle-aged-man-santa-hat-suit-showing-thumbs-christmas?token=" />
+        <img src="https://cdn.create.vista.com/api/media/medium/514536936/stock-photo-cheerful-middle-aged-man-santa-hat-suit-showing-thumbs-christmas?token=" style="width: 500px;" />
     </div>
 </body>
 

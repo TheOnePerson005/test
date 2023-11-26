@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-  </head>
-  <body>
-    <form action="mailto:chasejb123@gmail.com">
-        <input type="text" id="user" name="user">
-        <input type="submit">
-    </form>
-  </body>
+<html>
+
+<head>
+    <title>My Crappy Christmas Wishlist</title>
+    <style>
+        body {
+            background-color: #FFFFCC;
+            font-family: Comic Sans MS, cursive; /* Poor font choice */
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            z-index: 1; /* Set body z-index */
+        }
+
+        #left-christmas-background,
+        #right-christmas-background {
+            background-image: url('https://via.placeholder.com/150/FF0000/FFFFFF?text=Christmas');
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 50px;
+            z-index: -1;
+        }
+
+        #left-christmas-background {
+            left: 0;
+            background-repeat: repeat-y;
+            background-position: left top;
+        }
+
+        #right-christmas-background {
+            right: 0;
+            background-repeat: repeat-y;
+            background-position: right top;
+        }
+
+        .wishlist-image {
+            max-width: 200px;
+            transform: rotate(-5deg);
+            opacity: 0.7;
+            position: absolute;
+            z-index: 3; /* Images are placed above body */
+        }
+
+        #header {
+            text-align: center;
+            background-color: #FF3333;
+            padding: 10px;
+            position: relative;
+            z-index: 2; /* Set header z-index */
+        }
+
+        #main-content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border: 3px dashed #FF3333;
+            position: relative;
+            z-index: 2; /* Content is placed above background */
+        }
+
+        .item {
+            border-bottom: 1px solid #FF3333;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #footer {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #FF3333;
+            padding: 10px;
+            position: relative;
+            z-index: 3; /* Footer content is on top */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="left-christmas-background"></div>
+    <div id="right-christmas-background"></div>
+
+    <div id="header">
+        <h1 style="font-size: 40px;">Christmas Wishlist!</h1>
+    </div>
+
+    <img class="wishlist-image" src="https://st3.depositphotos.com/1005435/12568/i/950/depositphotos_125680556-stock-photo-man-wearing-christmas-hat-and.jpg" alt="Wishlist Image" style="top: 40px; left: 20px;" />
+    <img class="wishlist-image" src="https://c8.alamy.com/comp/DH5G48/cheerful-christmas-man-giving-thumbs-up-in-front-of-tree-DH5G48.jpg" alt="Wishlist Image" style="top: 220px; left: 80px; transform: rotate(15deg);" />
+    <img class="wishlist-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu2hpCY7ndRzssCJXrF2sny2hfvmG6uBWmnw&usqp=CAU" alt="Wishlist Image" style="top: 420px; left: 250px; transform: rotate(-10deg);" />
+
+    <div id="main-content">
+        <h2 style="font-size: 30px;">My Wishlist:</h2>
+        <div class="item">
+            <h3>Item 1: An amazing gift</h3>
+            <p>Description: This is the most awesome gift ever!</p>
+        </div>
+
+        <div class="item">
+            <h3>Item 2: Another cool thing</h3>
+            <p>Description: I really want this too!</p>
+        </div>
+
+        <div class="item">
+            <h3>Item 3: The last wish</h3>
+            <p>Description: I hope I get this for Christmas!</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <img src="https://cdn.create.vista.com/api/media/medium/514536936/stock-photo-cheerful-middle-aged-man-santa-hat-suit-showing-thumbs-christmas?token=" />
+    </div>
+</body>
+
 </html>

@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>My Crappy Christmas Wishlist</title>
+    <style>
+        body {
+            background-color: #FFFFCC;
+            font-family: Comic Sans MS; /* Poor font choice */
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            z-index: 1; /* Set body z-index */
+        }
+
+        #left-christmas-background,
+        #right-christmas-background {
+            background-image: url('https://media.istockphoto.com/id/1183155286/vector/christmas-vector-background.jpg?s=612x612&w=0&k=20&c=iWlNtRDMMnvImtX3mRYhA_-vqCfCPB-gv-DsqEUHarw=');
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 50px;
+            z-index: -1;
+        }
+
+        #left-christmas-background {
+            left: 0;
+            background-repeat: repeat-y;
+            background-position: left top;
+        }
+
+        #right-christmas-background {
+            right: 0;
+            background-repeat: repeat-y;
+            background-position: right top;
+        }
+
+        .wishlist-image {
+            max-width: 200px;
+            transform: rotate(-5deg);
+            opacity: 1;
+            position: absolute;
+            z-index: 3; /* Images are placed above body */
+        }
+
+        #header {
+            text-align: center;
+            background-color: #FF3333;
+            padding: 10px;
+            position: relative;
+            z-index: 2; /* Set header z-index */
+        }
+
+        #main-content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border: 3px dashed #FF3333;
+            position: relative;
+            z-index: 2; /* Content is placed above background */
+        }
+
+        .item {
+            border-bottom: 1px solid #FF3333;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #footer {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #FF3333;
+            padding: 10px;
+            position: relative;
+            z-index: 3; /* Footer content is on top */
+        }
+    </style>
+    <script>
+        function hideImage(imgId) {
+            var img = document.getElementById(imgId);
+            img.style.display = "none"; // Hide the image
+
+            setTimeout(function () {
+                img.style.display = "block"; // Show the image after 10 seconds
+            }, 10000); // 10 seconds = 10,000 milliseconds
+        }
+    </script>
+</head>
+
+<body>
+    <div id="left-christmas-background"></div>
+    <div id="right-christmas-background"></div>
+
+    <div id="header">
+        <h1 style="font-size: 40px;">Christmas Wishlist!</h1>
+    </div>
+
+    <img class="wishlist-image" id="image1" src="https://st3.depositphotos.com/1005435/12568/i/950/depositphotos_125680556-stock-photo-man-wearing-christmas-hat-and.jpg" alt="Wishlist Image" style="top: 40px; left: 20px;" onclick="hideImage('image1')" />
+    <img class="wishlist-image" id="image2" src="https://c8.alamy.com/comp/DH5G48/cheerful-christmas-man-giving-thumbs-up-in-front-of-tree-DH5G48.jpg" alt="Wishlist Image" style="top: 100px; right: 80px; transform: rotate(15deg);" onclick="hideImage('image2')" />
+    <img class="wishlist-image" id="image3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu2hpCY7ndRzssCJXrF2sny2hfvmG6uBWmnw&usqp=CAU" alt="Wishlist Image" style="top: 520px; right: 50px; transform: rotate(-10deg);" onclick="hideImage('image3')" />
+
+    <div id="main-content">
+        <h2 style="font-size: 30px; margin-bottom: 5px;">My Wishlist: 
+            <span style="font-size: 15px; color: grey;">(Subject to change)
+            </span>
+        </h2>
+        <p style="font-size: 10px; padding: 0px; margin-top: 5px; margin-left: px">
+            If the images are in the way, click them and they'll dissapear temporarily 
+        </p>
+        <div class="item">
+            <h3>Item Group 1:</h3>
+            <ul>
+                <li>
+                    <a href="https://m5stack.com/">M5Stack Devices</a>
+                    <ul>
+                        <li>Any of them should be fine, including the sensors for them</li>
+                        <li>I currently have a M5StickC Plus in case you get sensors, but even then I think they're all compatable</li>
+                        <li><b>The modules are only compatile with certain devices!</b></li>
+                    </ul>
+                </li>
+                <li>
+                    3d Printer Filament
+                    <ul>
+                        <li>
+                            I currently have a few things of black and white, so any other colors would be epic
+                            <ul>
+                                <li>PLA</li>
+                                <li>PET</li>
+                                <li>PETG</li>
+                                <li>TPU</li>
+                            </ul>
+                        </li>
+                        <li>
+                            The brand doesn't matter, just make sure the size is 1.75mm
+                            <ul>
+                                <li>1.75mm is the most common, so it shouldn't be an issue</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h3>Item Group 2:</h3>
+            <ul>
+                <li>
+                    <a href="https://www.amazon.com/s?k=filament+dehydrator&crid=1NMV4FYYSABGC&sprefix=filament+dehydrator%2Caps%2C124&ref=nb_sb_noss_1">
+                        Filament Dehydrator
+                    </a>
+                
+                    <ul>
+                        <li>Usually around $35-$50 or so</li>
+                        <li>Please just get a cheap one, I don't need anything fancy</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h3>Item Group 3:</h3>
+            <ul>
+                <li>
+                    <a href="https://weareplufl.com/">
+                        Plufl
+                    </a>
+                    <ul>
+                        <li>Like a dog bed thing for humans</li>
+                        <li>Looks very comfy</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Christmas-PNG/Transparent_Christmas_Wreath_PNG_Clipart.png?m=1507172111" style="width:150px; margins: 10px 100">
+            <img src="https://cdn.create.vista.com/api/media/medium/514536936/stock-photo-cheerful-middle-aged-man-santa-hat-suit-showing-thumbs-christmas?token=" style="width: 500px;" />
+            <img src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Christmas-PNG/Transparent_Christmas_Wreath_PNG_Clipart.png?m=1507172111" style="width:150px; margins: 10px 100">
+        </div>
+        <h2 style="text-align: center; font-family: 'Comic Sans MS', cursive; color: #ff0000; font-size: 2em; text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;">Merry Christmas!</h2>
+        <a href="#" style="display: inline-block; width: 150px; height: 50px; background-color: #2ecc71; border: 3px solid white; border-radius: 5px; overflow: hidden; font-family: 'Comic Sans MS', cursive; font-weight: bold; font-size: 17px; color: black; text-decoration: none; text-align: center; line-height: 50px;">
+           Go Back
+        </a>
+    </div>
+    
+</body>
+
+</html>

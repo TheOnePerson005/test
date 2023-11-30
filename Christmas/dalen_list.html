@@ -1,67 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dalen's Festive Christmas Wishlist</title>
+    <title>Christmas Wishlist</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            margin: 50px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
             background-color: #f0f0f0;
         }
-
-        h1 {
-            color: #c0392b;
-        }
-
-        .wishlist-item {
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #cc0000;
+        }
+        .wishlist-item {
             margin-bottom: 20px;
-            text-align: left;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
         }
-
-        #wishlist-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            background-color: #c0392b;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
+        .wishlist-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
-
-        #wishlist-button:hover {
-            background-color: #a93226;
+        .item-link {
+            display: block;
+            margin-top: 5px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .item-price {
+            font-weight: bold;
+            color: #009900;
         }
     </style>
 </head>
-
 <body>
-    <h1>Dalen's Festive Christmas Wishlist</h1>
-    <div class="wishlist-item">
-        <p><strong>Cozy Blanket:</strong> A soft, warm blanket for chilly evenings</p>
-    </div>
-    <div class="wishlist-item">
-        <p><strong>Smart Speaker:</strong> Voice-controlled music and smart home assistant</p>
-    </div>
-    <div class="wishlist-item">
-        <p><strong>Essential Oil Diffuser:</strong> Creates a relaxing atmosphere with pleasant scents</p>
-    </div>
-    <div class="wishlist-item">
-        <p><strong>Indoor Plants:</strong> Brighten up the home and purify the air</p>
-    </div>
-    <div class="wishlist-item">
-        <p><strong>Coffee Maker:</strong> For delicious homemade coffee</p>
-    </div>
-    <!-- Add more wishlist items as needed -->
 
-    <button id="wishlist-button" onclick="location.href='https://theoneperson005.github.io/test/Christmas/main.html'">View Full Wishlist</button>
+<div class="container">
+    <h1>Christmas Wishlist</h1>
+    
+    <div class="wishlist-item">
+        <h2>Turntable Stylus cleaner: <span class="item-price">$114</span></h2>
+        <a href="https://humminguru.com/products/humminguru-s-duo" class="item-link">humminguru.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>Steam Deck Dock: <span class="item-price">$80</span></h2>
+        <a href="https://store.steampowered.com/steamdeckdock" class="item-link">store.steampowered.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>Flood Record: <span class="item-price">$23</span></h2>
+        <a href="https://tmbgshop.com/products/flood-black-180g-vinyl" class="item-link">tmbgshop.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>Dead Man’s Party Record: <span class="item-price">$28</span></h2>
+        <a href="https://www.rubellanremasters.com/online-store/Oingo-Boingo-Dead-Mans-Party-LP-Yellow-w-Green-swirl-p578339580" class="item-link">rubellanremasters.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>Marsha, Thank You for the Dialectics T-Shirt (Medium): <span class="item-price">$35</span></h2>
+        <a href="https://willwoodandthetapeworms.bigcartel.com/product/marsha-thank-you-for-the-dialectics-but-i-need-you-to-leave-by-xray-leadvest" class="item-link">willwoodandthetapeworms.bigcartel.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>Iphone Case (Normal Album Squiggles + Iphone 13): <span class="item-price">$30</span></h2>
+        <a href="https://willwoodandthetapeworms.bigcartel.com/product/ww-design-tough-case-for-iphone" class="item-link">willwoodandthetapeworms.bigcartel.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>Nerf Phoenix 2.0: <span class="item-price">$40</span></h2>
+        <a href="https://www.amazon.com/NERF-Motorized-Official-Tactical-Attachment/dp/B083QZGMB3" class="item-link">amazon.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>NERF clips: <span class="item-price">$18</span></h2>
+        <a href="https://www.amazon.com/FUCAS-Bullet-Clips-Bullets-Magazine/dp/B07SVT3J7Y/ref=sr_1_5?keywords=nerf+magazine&qid=1701290363&sr=8-5" class="item-link">amazon.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>Game Face Trion Blaster: <span class="item-price">$65</span></h2>
+        <a href="https://www.amazon.com/Game-Face-GFTBR-Competition-Level-Spring-Powered/dp/B0BGG2PM5P/ref=sr_1_1?crid=32WGFTB8NJAQQ&keywords=%22game+face%22+%22trion%22&qid=1676657985&sprefix=game+face+trion+%2Caps%2C214&sr=8-1" class="item-link">amazon.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>NERF Machete: <span class="item-price">$25</span></h2>
+        <a href="https://www.amazon.com/NERF-NER0228-Zombie-Foam-Machete/dp/B07PNJYG3K/ref=pd_bxgy_img_d_sccl_1/139-1081492-5820769?pd_rd_w=qKXCX&content-id=amzn1.sym.7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_p=7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_r=MFW5YM1W4NKY10BJJP6N&pd_rd_wg=r1Scg&pd_rd_r=0a9884af-5c87-40a8-93d9-2cf00d9c4db5&pd_rd_i=B07PNJYG3K&psc=1" class="item-link">amazon.com</a>
+    </div>
+
+    <div class="wishlist-item">
+        <h2>Record/Laptop Carrying Bag: <span class="item-price">$45</span></h2>
+        <a href="https://www.amazon.com/LoDrid-Detachable-Dividers-Carrying-Separated/dp/B09NRMT612/ref=sr_1_3?keywords=record%2Bbag&qid=1701292890&sr=8-3&th=1" class="item-link">amazon.com</a>
+    </div>
+    
+</div>
+
 </body>
-
 </html>
